@@ -1,8 +1,13 @@
+<div align="center">
+
 # Chatterbox TTS Enhanced (Modified Version)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/airdropia/Chatterbox-TTS/blob/main/Chatterbox%20TS.ipynb)
 
 A high-quality, open-source voice cloning, text-to-speech, and voice conversion application.
 
 This is a modified version of the original repository that addresses installation and compatibility issues.
+</div>
 
 ## Features
 
@@ -15,18 +20,18 @@ This is a modified version of the original repository that addresses installatio
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/Chatterbox-TTS-Modified.git
-   cd Chatterbox-TTS-Modified
+   git clone https://github.com/airdropia/Chatterbox-TTS.git
+   cd Chatterbox-TTS
    ```
 
 2. Install the required dependencies:
    ```bash
-   pip install -r requirements_new.txt
+   pip install -r requirements.txt
    ```
 
 3. Run the application:
    ```bash
-   python app_new.py
+   python app.py
    ```
 
 ## Modifications
