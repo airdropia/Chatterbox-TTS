@@ -1,8 +1,8 @@
-# Chatterbox TTS Enhanced
+# Chatterbox TTS Enhanced (Modified Version)
 
 A high-quality, open-source voice cloning, text-to-speech, and voice conversion application.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/airdropia/Chatterbox-TTS/blob/master/Chatterbox%20TTS.ipynb)
+This is a modified version of the original repository that addresses installation and compatibility issues.
 
 ## Features
 
@@ -11,23 +11,50 @@ A high-quality, open-source voice cloning, text-to-speech, and voice conversion 
 - **Voice Conversion (VC):** Transform your voice into someone else's.
 - **Voice Cloning:** Clone a new voice from just a few seconds of audio.
 
+## Installation
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/your-username/Chatterbox-TTS-Modified.git
+   cd Chatterbox-TTS-Modified
+   ```
+
+2. Install the required dependencies:
+   ```bash
+   pip install -r requirements_new.txt
+   ```
+
+3. Run the application:
+   ```bash
+   python app_new.py
+   ```
+
+## Modifications
+
+This modified version includes the following fixes and improvements:
+
+1. **Compatible Dependencies:** Updated `requirements.txt` with compatible versions of PyTorch and related libraries.
+
+2. **Fixed Import Paths:** Modified import paths to ensure all modules can be found correctly.
+
+3. **Included s3tokenizer:** Added a complete local copy of the s3tokenizer module to avoid external dependency issues.
+
+4. **Simplified Implementation:** Created simplified implementations of some components to ensure stability.
+
 ## How to Run on Google Colab
 
-1. Click the "Open in Colab" badge above.
-2. In the Colab notebook, run the cells one by one.
+1. Open the notebook in Colab.
+2. Run the cells one by one.
 3. A public Gradio URL will be generated. Click on it to open the application in your browser.
 
-## Installation Troubleshooting
+## Troubleshooting
 
-If you encounter issues with the `s3tokenizer` dependency during installation, especially in Google Colab, try the following approach:
+If you encounter any issues, please check the following:
 
-### For Google Colab Environment
-If running the notebook directly in Colab fails due to Git clone errors, manually install the dependencies in this order:
-1. First install the problematic dependency separately: `!pip install git+https://github.com/step-audio/s3tokenizer.git@88f2263 --quiet`
-2. Then install the remaining requirements: `!pip install -r requirements.txt --quiet`
-3. Finally, run the application: `!python app.py`
+1. Ensure you have a compatible GPU (at least 5GB of VRAM).
+2. Make sure all dependencies are installed correctly.
+3. Check that you're using the correct Python version (3.8+ recommended).
 
-### Alternative Installation Methods
-If the standard installation fails, you can also try one of these approaches:
-1. **Install with no dependencies first**: `pip install git+https://github.com/step-audio/s3tokenizer.git@88f2263 --no-deps --quiet`, then install other requirements separately
-2. **Manual cloning**: Clone the s3tokenizer repository manually, checkout the specific commit (88f2263), and install it locally with `pip install -e .`
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
